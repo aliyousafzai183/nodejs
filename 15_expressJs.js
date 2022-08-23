@@ -10,6 +10,7 @@ const express = require('express');
 
 const app = express();
 
+// making route
 app.get('',(req,res)=>{
     res.send("Home Page");
 })
