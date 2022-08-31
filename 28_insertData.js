@@ -14,16 +14,17 @@ async function dbConnect(){
 // insert Function
 const insert =async () =>{
     const db = await dbConnect();
-    const result = await db.insertMany(
+    const result = await db.insertOne(
         // to insert one
-        // {name:"S10" , brand:"vivo" , price:1000 , category: "smart-phone"}
+        {name:"S10" , brand:"vivo" , price:1000 , category: "smart-phone"}
         
-        [
-            {name:"S22" , brand:"Samsung" , price:1600 , category: "smart-phone"},
-            {name:"S6" , brand:"Samsung" , price:400 , category: "smart-phone"},
-            {name:"Note8" , brand:"Infinix" , price:400 , category: "smart-phone"}
+        // to insertMany
+        // [
+        //     {name:"S22" , brand:"Samsung" , price:1600 , category: "smart-phone"},
+        //     {name:"S6" , brand:"Samsung" , price:400 , category: "smart-phone"},
+        //     {name:"Note8" , brand:"Infinix" , price:400 , category: "smart-phone"}
 
-        ]
+        // ]
     );
     
     if(result.acknowledged){
