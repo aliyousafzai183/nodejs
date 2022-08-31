@@ -1,6 +1,5 @@
-const dbConnection = require('./27_mongodb')
+const dbConnection = require('./27_mongodb');
 
-// 1: OLD
 // dbConnection().then((resp)=>{
 //     resp.find({}).toArray().then((res)=>{
 //         console.log(res);
@@ -10,10 +9,10 @@ const dbConnection = require('./27_mongodb')
 // OR
 
 // 2:MODERN
-const main =async ()=>{
+const read =async ()=>{
     let data = await dbConnection();
-    data =await data.find({}).toArray();
-    console.log(data);
+    let result = await data.find({}).toArray();
+    console.log(result);
 }
 
-main();
+read();
