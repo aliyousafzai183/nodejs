@@ -15,8 +15,10 @@ const deleteData =async ()=>{
         {name:"S10"}
     );
 
-    if(result.acknowledged){
+    if(result.deletedCount > 0){
         console.log("Deleted");
+    }else{
+        console.log("Not Found!");
     }
 }
 
