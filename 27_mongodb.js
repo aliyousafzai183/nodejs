@@ -1,9 +1,9 @@
 // this is database connection file
 
-const {mongoClient} = require('mongodb');
+const {MongoClient} = require('mongodb');
 const url = "mongodb://localhost:27017";
 const databaseName = "ecommerce";
-const client = new mongoClient(url);
+const client = new MongoClient(url);
 
 async function dbConnection(){
     let result =await client.connect();
